@@ -8,13 +8,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const gameEl = document.getElementById('game');
   const guessInput = gameEl.querySelector('#guess-input');
   const playBtn = gameEl.querySelector('#play-btn');
+  const minNumEl = gameEl.querySelector('.min-num');
+  const maxNumEl = gameEl.querySelector('.max-num');
   const messageEl = gameEl.querySelector('.message');
+
+  minNumEl.textContent = min;
+  maxNumEl.textContent = max;
 
   playBtn.addEventListener('click', play);
 
   function play(event) {
-    console.log(secretNumber);
-
     if (playBtn.classList.contains('playing')) {
       guess(event);
       return;
