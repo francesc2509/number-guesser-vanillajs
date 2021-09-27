@@ -50,8 +50,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
   function startGame(event) {
-    secretNumber = Math.trunc((Math.random()*10+1));
+    secretNumber = Math.trunc((Math.random()*(max - min + 1) + min));
     guessesRemaining = 3;
+
+    console.log(secretNumber);
 
     guessInput.style.borderColor = 'initial';
     guessInput.disabled = false;
