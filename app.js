@@ -53,8 +53,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     secretNumber = Math.trunc((Math.random()*(max - min + 1) + min));
     guessesRemaining = 3;
 
-    console.log(secretNumber);
-
     guessInput.style.borderColor = 'initial';
     guessInput.disabled = false;
     guessInput.value = '';
